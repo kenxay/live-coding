@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Notas Privadas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1 class="main-title">Notas Privadas</h1>
+        
+        <section id="auth-section">
+            <div class="grid">
+                <article class="auth-card">
+                    <h3>Iniciar Sesión</h3>
+                    <form id="login-form">
+                        <input type="email" id="login-email" placeholder="Correo electrónico" required>
+                        <input type="password" id="login-password" placeholder="Contraseña" required>
+                        <button type="submit">Entrar</button>
+                    </form>
+                </article>
+                
+                <article class="auth-card">
+                    <h3>Registro Nuevo</h3>
+                    <form id="register-form">
+                        <input type="email" id="register-email" placeholder="Correo electrónico" required>
+                        <input type="password" id="register-password" placeholder="Contraseña" required>
+                        <button type="submit" class="secondary">Crear cuenta</button>
+                    </form>
+                </article>
+            </div>
+        </section>
+
+        <section id="notas-section" style="display: none;">
+            <article>
+                <header class="notas-header">
+                    <h3>📝 Mis Apuntes Secretos</h3>
+                    <button id="logout-btn" class="outline secondary">Cerrar Sesión</button>
+                </header>
+                
+                <form id="nota-form" class="create-note-form">
+                    <input type="text" id="nota-titulo" placeholder="Título de la nota..." required maxlength="100">
+                    <textarea id="nota-contenido" placeholder="Escribe tu secreto aquí..." required rows="3"></textarea>
+                    <button type="submit">Guardar Nota</button>
+                </form>
+                
+                <hr>
+                
+                <div id="lista-notas">
+                    </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
